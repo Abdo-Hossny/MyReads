@@ -7,16 +7,19 @@ const BookCard = ({ book,  onShelfChange }) => {
         onShelfChange(book, e.target.value);
       };
       
-    if (!book)
-        return
-    const { authors, id, imageLinks, title, } = book;
-    const { smallThumbnail, thumbnail } = imageLinks
+    
     
     return (
-        <div className="book-card" id={id}>
-            <div className="book-card__img">
-                <img src={smallThumbnail} alt="" />
-                
+        <div className="book-card" id={book.id}>
+            <div className="book-card__img" style={{
+            width: 128,
+            height: 193,
+            backgroundImage:
+              book.imageLinks !== undefined
+                ? `url("${book.imageLinks.smallThumbnail}")`
+                : "",
+          }}>
+                                
                 <div className="book-shelf-changer">
           <select defaultValue={book.shelf} onChange={handleOnChange}>
             <option value="none" disabled>
@@ -25,17 +28,17 @@ const BookCard = ({ book,  onShelfChange }) => {
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>
             <option value="read">Read</option>
-            {book.shelf !== "none" && <option value="none">None</option>}
+            {book.shelf !== "none" && <option>None</option>}
           </select>
         </div>
             </div>
             <div className="book-card__info">
                 <div className="book-card__title">
-                    <p>{title}</p>
+                    <p>{book.title}</p>
                 </div>
-                {authors && <div className="book-card__writer">
-                    {authors.map((author) => <p key={author}>{author}</p>)}
-                </div>}
+                <div className="book-card__writer">
+                    <p key={book.authors}>{book.authors}</p>
+                </div>
 
             </div>
             

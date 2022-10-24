@@ -42,6 +42,7 @@
 
 .book-card__img {
   position: relative;
+  margin: 0 auto;
   margin-bottom: 10px;
 }
 .book-card .book-card__img img{
