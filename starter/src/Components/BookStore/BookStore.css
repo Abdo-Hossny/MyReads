@@ -1,0 +1,80 @@
+.bookstore {
+    background-color: #888;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh ;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.bookstore .header {
+    padding: 15px 0;
+    background-color: #eee;
+    position: relative;
+}
+
+.bookstore .header button {
+    display: block;
+    width: 45px;
+    height: 90%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    border: none;
+    cursor: pointer;
+}
+.bookstore .header button img {
+    height: 100%;
+    vertical-align: middle;
+    width: 85%;
+}
+.bookstore .header form {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.bookstore .header form input {
+    width: 70%;
+    margin: 0 auto;
+    height: 45px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    padding: 5px 15px; 
+    outline: none;
+}
+.bookstore .books{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 60px;
+    padding: 25px;
+}
+.search-bar {
+    background-color: #eee;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+
+overflow: hidden;}
+.close-search {
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+.search-books-input-wrapper {
+    float: left;
+    width: 75%;
+    text-align: center;
+}
+
+.search-books-input-wrapper input {
+    width: 80%;
+    height: 35px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid #bbb;
+    padding: 10px;
+    
+}
