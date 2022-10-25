@@ -17,7 +17,7 @@ const BookStore = ({ books, onShelfChange }) => {
               const currentBook = books.find((b) => b.id === book.id);
     
               book.shelf = currentBook === undefined ? "none" : currentBook.shelf;
-            }, 2000);
+            }, 500);
             setSearchResult(result);
           } else {
             setSearchResult([]);

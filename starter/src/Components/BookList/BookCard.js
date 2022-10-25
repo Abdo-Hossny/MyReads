@@ -22,13 +22,13 @@ const BookCard = ({ book,  onShelfChange }) => {
                                 
                 <div className="book-shelf-changer">
           <select defaultValue={book.shelf} onChange={handleOnChange}>
-            <option value="none" disabled>
+            <option value="Move to..." disabled>
               Move to...
             </option>
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>
             <option value="read">Read</option>
-            {book.shelf !== "none" && <option>None</option>}
+            <option value="none">None</option>
           </select>
         </div>
             </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NotFound  from './NotFound';
 import BookStore from "./Components/BookStore/BookStore";
 import MyBooks from "./Components/MyBooks/MyBooks";
 import { Routes, Route } from "react-router-dom";
@@ -32,6 +33,7 @@ function App() {
   return (
     <div className="app">
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route exact path="/" element={<MyBooks categories={categories} books={myBooks} onShelfChange={handleOnShelfChange}/>} />
         <Route path="/search" element={<BookStore books={myBooks} onShelfChange={handleOnShelfChange} />} />
       </Routes>
