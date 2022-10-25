@@ -2,7 +2,6 @@ import React from "react";
 import AddButton from "../BookStore/AddButton";
 import BookCategories from '../BookList/BookCategories';
 import Header from '../Header';
-import PropTypes from "prop-types";
 
 const MyBooks = ({ categories, books, onShelfChange }) => {
     return(
@@ -26,5 +25,4 @@ const MyBooks = ({ categories, books, onShelfChange }) => {
         </>
     )
 }
-MyBooks.propTypes = {};
 export default MyBooks;
