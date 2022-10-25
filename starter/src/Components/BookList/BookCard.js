@@ -46,5 +46,8 @@ const BookCard = ({ book,  onShelfChange }) => {
         </div>
     )
 }
-BookCard.propTypes = {};
+BookCard.propTypes = {
+  book: PropTypes.object.isRequired,
+  onShelfChange: PropTypes.func.isRequired,
+};
 export default BookCard;

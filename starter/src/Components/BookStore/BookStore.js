@@ -55,5 +55,5 @@ const BookStore = ({ books, onShelfChange }) => {
     </div>
     )
 }
-BookStore.propTypes ={}
+
 export default BookStore;
